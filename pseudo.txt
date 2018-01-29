@@ -1,0 +1,16 @@
+game jumbotron with name and theme styling
+
+collum 1 with youtube link to video playing song from band
+
+collum 2 with heading 1 (Press any key to get started!)
+    ->wins 
+    ->current word
+       (__________) -> use undersocres as place holders 
+                        and to show amount of letters 
+                        in current word
+
+    ->number of guesses remaining
+                (use number value to display)
+
+    ->letters guessed
+        (show list using "," to seperate each letter)
