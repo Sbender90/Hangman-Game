@@ -15,3 +15,15 @@ var start = alert('Press a letter to start!');
 if(start == randomWord) {
 
 }
+
+{/* <input type="text" onkeyup="guessedLetter()"> */}
+
+document.addEventListener("keyup",(event) => {
+    const keyname = event.key;
+    document.write("keyup event\n\n" + "key: " + keyName);
+});
+
+function userGuess() {
+    var x = document.getElementById("guessedLetter");
+    x.value = x.value.tolowerCase();
+}
