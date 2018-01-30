@@ -3,3 +3,58 @@ body {
     width: 100%;
 
 }
+
+.header h1 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 75px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    background-color: #e5ff00;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    border: 2px dotted;
+    border-color: aquamarine;
+
+}
+
+.column-1 {
+    float: left;
+    width: 48%;
+    height: fit-content;
+    background-color: #f18b37;
+    border: 3px dashed;
+    border-color: saddlebrown;
+    margin-top: 5px;
+
+}
+
+.column-2 {
+    float: right;
+    width: 48%;
+    background-color: purple;
+    background-color: #7ffbff;
+    border: 3px dashed;
+    border-color: saddlebrown;
+    margin-top: 5px;
+    
+    
+}
+
+#current-word {
+    text-align: center;
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+li:before {
+    content: "_";
+    
+
+}
