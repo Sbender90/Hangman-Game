@@ -4,6 +4,7 @@ var wordList = ["weezer", "nirvina", "social distortion", "cake",
     "soundgarden", "soul asylum"
 ];
 
+var usedLetters = [];
 var randomWord = wordList[Math.floor(Math.random() * wordList.length)];
 
 console.log(randomWord);
@@ -16,7 +17,7 @@ if(start == randomWord) {
 
 }
 
-{/* <input type="text" onkeyup="guessedLetter()"> */}
+/* <input type="text" onkeyup="guessedLetter()"> */
 
 document.addEventListener("keyup",(event) => {
     const keyname = event.key;
