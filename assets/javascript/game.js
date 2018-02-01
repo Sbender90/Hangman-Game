@@ -5,36 +5,39 @@ var wordList = ["weezer", "nirvina", "social distortion", "cake",
 ];
 
 var usedLetters = [];
-var randomWord = wordList[Math.floor(Math.random() * wordList.length)];
+var randomWord = Math.floor(Math.random() * (wordList.length));
+document.getElementById('currentWord').innerHTML = wordList[randomWord];
 
-console.log(randomWord);
 
-var currentWordListItems = "";
-for (var i = 0; i < randomWord.length; i++) {
-    console.log(randomWord.charAt(i));
-    currentWordListItems = currentWordListItems + "<li id=\"current-word-" + i  + "\" class=\"hidden\">" + randomWord.charAt(i) + "</li>";
-}
-console.log("currentWordListItems", currentWordListItems);
 
-var currentWord = document.getElementById('current-word');
-currentWord.innerHTML(currentWordListItems);
-
-// document.getElementById("randomWord").textContent = randomWord;
-
-// var start = alert('Press a letter to start!');
-
-// if(start == randomWord) {
-
+// var currentWordListItems = "_";
+// for (var i = 0; i < randomWord.length; i++) {
+//     console.log(randomWord.charAt(i));
+//     currentWordListItems = currentWordListItems + "<li id=\"current-word-" + i  + "\" class=\"hidden\">" + randomWord.charAt(i) + "</li>";
 // }
+// console.log("currentWordListItems", currentWordListItems);
 
-/* <input type="text" onkeyup="guessedLetter()"> */
+// var currentWord = document.getElementById('randomWord');
+// currentWord.innerHTML(randomWord);
 
-// document.addEventListener("keyup",(event) => {
-//     const keyname = event.key;
-//     document.write("" + "key: " + keyName);
-// });
+// var usedLetters = {
+//     length: 0,
 
-// function userGuess() {
-//     var x = document.getElementById("guessedLetter");
-//     x.value = x.value.tolowerCase();
-// }
+//     addElem: function addElem(words) {
+
+//     }
+// };
+
+// document.getElementById("wrongLetters").onkeyup = function (xLetters); {
+//     function xLetters(){ 
+//         var x = document.getElementById("wrongLetters");
+//         x.value = x.value.toLowerCase();
+//         wrongLetters.push("usedLetters");
+//         console.log(usedLetters);
+//     }
+// };
+
+function letterGuessed(evt){
+    console.log(evt.keyCode)
+    letterGuessed.push('usedLetters');
+};

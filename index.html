@@ -36,33 +36,15 @@
         <section id="wins">
             <h3>Wins:</h3>
         </section>
-            <section id="hidden-word">
+            <div id="hidden-word">
                 <section id="current-header">
                 <h3>Current Word:</h3>
                 </section>
-                    <ul id="current-word">
-                        <!-- <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li>
-                        <li class="hidden"></li> -->
-                    </ul>
+                    <div id="currentWord">
+                        <!-- <input type="array" onKeyUp="letterGuessed(event)"> -->
 
+                    </div>
+                    
                     <div class="guesses">
                         <section id="guesses-header">
                         <h3>Number of Guesses Remaining:</h3>
@@ -72,11 +54,15 @@
                         </section>
 
                     </div>    
-        </section>
+                </div>
 
-            <div class="guesses-letters">
+            <div class="guessed-letters">
                 <h3>Letters Already Guessed:</h3>
-                <!-- letters listed here -->
+           <span id="wrongGuess">
+               <ul id="wrongGuess-ul">
+            
+               </ul>
+           </span>
             </div>
  
     </div>
