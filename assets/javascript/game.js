@@ -28,16 +28,15 @@ console.log(wordList[randomWordIndex]);
 //     }
 // };
 
-// document.getElementById("wrongLetters").onkeyup = function (xLetters); {
-//     function xLetters(){ 
-//         var x = document.getElementById("wrongLetters");
-//         x.value = x.value.toLowerCase();
-//         wrongLetters.push("usedLetters");
-//         console.log(usedLetters);
-//     }
-// };
+document.onkeyup = function (event) {
+   var key = (event.key.toLowerCase);
+        
+        
+        usedLetters.push(key);
+        console.log(usedLetters);
+    }
 
-function letterGuessed(evt){
-    console.log(evt.keyCode)
-    letterGuessed.push('usedLetters');
-};
+
+
+
+document.getElementById('usedLetters').innerText = wordList[randomWordIndex];
