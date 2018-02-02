@@ -4,29 +4,23 @@ var wordList = ["weezer", "nirvina", "social distortion", "cake",
     "soundgarden", "soul asylum"
 ];
 
+var lives = 6;
+
 var usedLetters = [];
-var randomWordIndex = Math.floor(Math.random() * wordList.length);
+
+ function (start) {
+    this.correct = false;
+    this.currentWord = wordList[Math.floor(Math.random() * wordList.length)];
+    this.yes = document.getElementById('right');
+    this.no = document.getElementById('wrong');
+    this.lives = document.getElementById('lives');
+};
+
 document.getElementById('currentWord').innerText = wordList[randomWordIndex];
 
 console.log(wordList[randomWordIndex]);
 
-// var currentWordListItems = "_";
-// for (var i = 0; i < randomWord.length; i++) {
-//     console.log(randomWord.charAt(i));
-//     currentWordListItems = currentWordListItems + "<li id=\"current-word-" + i  + "\" class=\"hidden\">" + randomWord.charAt(i) + "</li>";
-// }
-// console.log("currentWordListItems", currentWordListItems);
 
-// var currentWord = document.getElementById('randomWord');
-// currentWord.innerHTML(randomWord);
-
-// var usedLetters = {
-//     length: 0,
-
-//     addElem: function addElem(words) {
-
-//     }
-// };
 
 document.onkeyup = function (event) {
    var key = (event.key.toLowerCase);
@@ -36,7 +30,10 @@ document.onkeyup = function (event) {
         console.log(usedLetters);
     }
 
+wordList.indexOf(wordList);
 
+function updateCurrentWord (currentWord, currentWord) {
+    if (wordList.indexOf(wordList) === -1) {
 
-
-document.getElementById('usedLetters').innerText = wordList[randomWordIndex];
+    }
+}
