@@ -5,10 +5,10 @@ var wordList = ["weezer", "nirvina", "social distortion", "cake",
 ];
 
 var usedLetters = [];
-var randomWord = Math.floor(Math.random() * (wordList.length));
-document.getElementById('currentWord').innerHTML = wordList[randomWord];
+var randomWordIndex = Math.floor(Math.random() * wordList.length);
+document.getElementById('currentWord').innerText = wordList[randomWordIndex];
 
-
+console.log(wordList[randomWordIndex]);
 
 // var currentWordListItems = "_";
 // for (var i = 0; i < randomWord.length; i++) {
