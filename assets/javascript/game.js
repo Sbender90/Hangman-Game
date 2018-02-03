@@ -4,36 +4,36 @@ var wordList = ["weezer", "nirvina", "social distortion", "cake",
     "soundgarden", "soul asylum"
 ];
 
-var lives = 6;
+var wins = [];
+var lives = 9;
 
 var usedLetters = [];
+var randomWordIndex = Math.floor(Math.random() * wordList.length);
 
- function (start) {
-    this.correct = false;
-    this.currentWord = wordList[Math.floor(Math.random() * wordList.length)];
-    this.yes = document.getElementById('right');
-    this.no = document.getElementById('wrong');
-    this.lives = document.getElementById('lives');
-};
+
+document.getElementById('lives').innerText = lives;
 
 document.getElementById('currentWord').innerText = wordList[randomWordIndex];
-
 console.log(wordList[randomWordIndex]);
 
 
 
 document.onkeyup = function (event) {
-   var key = (event.key.toLowerCase);
+    var key = (event.key.toLowerCase);
+      wrongGuess.textContent = event.key;
+      var x = event.keyCode;
         
-        
-        usedLetters.push(key);
-        console.log(usedLetters);
+        usedLetters.push(x);
+        console.log(event);
+        console.log(x);
     }
 
+    
+  
 wordList.indexOf(wordList);
 
-function updateCurrentWord (currentWord, currentWord) {
-    if (wordList.indexOf(wordList) === -1) {
+// function updateCurrentWord (currentWord, currentWord) {
+//     if (wordList.indexOf(wordList) === -1) {
 
-    }
-}
+//     }
+// }
