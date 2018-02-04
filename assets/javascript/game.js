@@ -32,6 +32,7 @@ document.onkeyup = function (event) {
     var wrongGuessesString = "";
     for(var i = 0; i < usedLetters.length; i++) {
         wrongGuessesString = wrongGuessesString + usedLetters[i] + " "; 
+        lives -=1;
     }
     document.getElementById('wrongGuess').innerText = wrongGuessesString;
 
