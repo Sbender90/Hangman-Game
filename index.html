@@ -9,67 +9,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
-   
-   
-
-    
 </head>
 
 <body>
-        
-<div class="container">
-    <div class="header">
-        <h1>Hangman out of the 90's</h1>
-    </div>
-    <div class="column-1">
-        <section id="example-header"> 
-        <h2>Here they are!</h2>
-        </section>
-        <section id="example-video">
-            <iframe width="250" height="250"
-            src="img.jpg" frameborder="0"
-           allowfullscreen></iframe>
-        </section>
-    </div>
-    <div class="column-2">
-        <section id="info-header">
-        <h2>Press any letter to get started!</h2>
-        </section> 
-        <section id="wins">
-            <h3>Wins:</h3>
-        </section>
+    <div class="container">
+        <div class="header">
+            <h1>Hangman out of the 90's</h1>
+        </div>
+        <div class="column-1">
+            <section id="example-header"> 
+                <h2>Here they are!</h2>
+            </section>
+            <section id="example-video">
+                <iframe width="250" height="250" src="img.jpg" frameborder="0" allowfullscreen></iframe>
+            </section>
+        </div>
+        <div class="column-2">
+            <section id="info-header">
+                <h2>Press any letter to get started!</h2>
+            </section> 
+            <section id="wins">
+                <h3>Wins:</h3>
+            </section>
             <div id="hidden-word">
                 <section id="current-header">
-                <h3>Current Word:</h3>
+                    <h3>Current Word:</h3>
                 </section>
-                    <span id="currentWord">
-                        <!-- where the hidden word in displayed -->
-
-                    </span>
+                <span id="currentWord"><!-- where the hidden word in displayed --></span>
                     
-                    <div class="guesses">
-                        <section id="guesses-header">
+                <div class="guesses">
+                    <section id="guesses-header">
                         <h3>Number of Guesses Remaining:</h3>
-                        </section>
-                        <section id="livesRemaining">
-                            <!-- number of lives listed here -->
-                        </section>
-
-                    </div>    
-                </div>
+                    </section>
+                    <section id="livesRemaining">
+                        <!-- number of lives listed here -->
+                    </section>
+                </div>    
+            </div>
 
             <div class="guessed-letters">
                 <h3>Letters Already Guessed:</h3>
-           <span id="wrongGuess">
-
-           </span>
+                <span id="wrongGuess"></span>
             </div>
- 
+        </div>
     </div>
-
-
 
     <script src="assets/javascript/game.js"></script>   
 </body>
-
 </html>
