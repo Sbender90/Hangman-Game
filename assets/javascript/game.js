@@ -6,67 +6,49 @@ var wordList = ["weezer", "nirvina", "social distortion", "cake",
 
 var wins = [];
 var lives = 9;
-
 var usedLetters = [];
 var randomWordIndex = Math.floor(Math.random() * wordList.length);
 var liveWord = wordList[randomWordIndex];
+
 var currentWord = '';
 for(var i = 0; i < liveWord.length; i++) {
     currentWord = currentWord + "_ ";
-
 }
+
 document.getElementById('currentWord').innerText = currentWord;
 document.getElementById('livesRemaining').innerText = lives;
 
-// document.getElementById('currentWord').innerText = wordList[randomWordIndex];
-console.log(wordList[randomWordIndex]);
-
-
+console.log("current word is ", liveWord);
 
 document.onkeyup = function (event) {
-    currentWord = "";
-    var key = (event.key.toLowerCase());
+    var key = event.key.toLowerCase();
 
-    //   wrongGuess.textContent = event.key;
-      var x = event.key;
-        
-        usedLetters.push(x);
-        var wrongGuessesString = "";
-        for(var i = 0; i < usedLetters.length; i++) {
-            wrongGuessesString = wrongGuessesString + usedLetters[i] + " "; 
-        };
-        for(var i = 0; i < liveWord.length; i++) {
-            if (liveWord.indexOf(x) !== -1) {
-                currentWord = currentWord + liveWord[i] + " ";
-            }
-            // if(liveWord.indexOf(x) !== -1) {
-            //     //if(liveWord[i] === (usedLetters.indexOf(key) !== -1)) {
-            //         currentWord = currentWord + liveWord[i] + " ";
-            //     //}
-               
-
-            // } 
-            else{
-                currentWord = currentWord + "_ ";
-            }
-// want to do an if statement here to compare the liveword to the onkeyup
-            // if (liveWord.indexOf())
-            
-            
-        
-        }
-        document.getElementById('currentWord').innerText = currentWord;
-        wrongGuess.textContent = wrongGuessesString;
-        console.log(event);
-        console.log(x);
+    if (usedLetters.indexOf(key) !== -1) {
+        return;
     }
 
+    usedLetters.push(key);
 
-  
-wordList.indexOf(wordList);
+    var wrongGuessesString = "";
+    for(var i = 0; i < usedLetters.length; i++) {
+        wrongGuessesString = wrongGuessesString + usedLetters[i] + " "; 
+    }
+    document.getElementById('wrongGuess').innerText = wrongGuessesString;
 
-// function updateCurrentWord (currentWord, currentWord) {
-//     if (wordList.indexOf(wordList) === -1) {
+    currentWord = "";
+    for(var i = 0; i < liveWord.length; i++) {
 
-//     }
-// }
+        if ( usedLetters.indexOf(liveWord[i].toLowerCase()) !== -1)  {
+            currentWord = currentWord + liveWord[i] + " ";
+        } else {
+            currentWord = currentWord + "_ ";
+        }
+    
+    }
+    document.getElementById('currentWord').innerText = currentWord;
+
+    // if currentWord with all white space removed === liveWord with all white space removed and they have chances left they win
+    // if currentWord with all white space removed !== liveWord with all white space removed and they are out of chances they lose
+    // update wins and losses accordingly
+
+}
