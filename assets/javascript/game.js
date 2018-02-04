@@ -9,21 +9,52 @@ var lives = 9;
 
 var usedLetters = [];
 var randomWordIndex = Math.floor(Math.random() * wordList.length);
+var liveWord = wordList[randomWordIndex];
+var currentWord = '';
+for(var i = 0; i < liveWord.length; i++) {
+    currentWord = currentWord + "_ ";
 
-
+}
+document.getElementById('currentWord').innerText = currentWord;
 document.getElementById('lives').innerText = lives;
 
-document.getElementById('currentWord').innerText = wordList[randomWordIndex];
+// document.getElementById('currentWord').innerText = wordList[randomWordIndex];
 console.log(wordList[randomWordIndex]);
 
 
 
 document.onkeyup = function (event) {
-    var key = (event.key.toLowerCase);
-      wrongGuess.textContent = event.key;
-      var x = event.keyCode;
+    currentWord = "";
+    var key = (event.key.toLowerCase());
+
+    //   wrongGuess.textContent = event.key;
+      var x = event.key;
         
         usedLetters.push(x);
+        var wrongGuessesString = "";
+        for(var i = 0; i < usedLetters.length; i++) {
+            wrongGuessesString = wrongGuessesString + usedLetters[i] + " "; 
+        };
+        for(var i = 0; i < liveWord.length; i++) {
+            if (liveWord.indexOf(x) !== -1) {
+                currentWord = currentWord + liveWord[i] + " ";
+            }
+            // if(liveWord.indexOf(x) !== -1) {
+            //     //if(liveWord[i] === (usedLetters.indexOf(key) !== -1)) {
+            //         currentWord = currentWord + liveWord[i] + " ";
+            //     //}
+               
+
+            // } 
+            else{
+                currentWord = currentWord + "_ ";
+            }
+            
+            
+        
+        }
+        document.getElementById('currentWord').innerText = currentWord;
+        wrongGuess.textContent = wrongGuessesString;
         console.log(event);
         console.log(x);
     }
