@@ -16,7 +16,7 @@ for(var i = 0; i < liveWord.length; i++) {
 
 }
 document.getElementById('currentWord').innerText = currentWord;
-document.getElementById('lives').innerText = lives;
+document.getElementById('livesRemaining').innerText = lives;
 
 // document.getElementById('currentWord').innerText = wordList[randomWordIndex];
 console.log(wordList[randomWordIndex]);
@@ -49,6 +49,8 @@ document.onkeyup = function (event) {
             else{
                 currentWord = currentWord + "_ ";
             }
+// want to do an if statement here to compare the liveword to the onkeyup
+            // if (liveWord.indexOf())
             
             
         
@@ -59,7 +61,7 @@ document.onkeyup = function (event) {
         console.log(x);
     }
 
-    
+
   
 wordList.indexOf(wordList);
 
