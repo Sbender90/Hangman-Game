@@ -58,7 +58,9 @@ document.onkeyup = function (event) {
   }
   document.getElementById('h3').innerHTML = winsArray;
     // if currentWord with all white space removed === liveWord with all white space removed and they have chances left they win
+        // need to make the white space and actual break in the text so you don't have to use space bar   
     // if currentWord with all white space removed !== liveWord with all white space removed and they are out of chances they lose
     // update wins and losses accordingly
+        //its overriding the heading with 0 and not updating properly
 
 }
