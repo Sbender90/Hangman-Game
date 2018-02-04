@@ -46,7 +46,11 @@ document.onkeyup = function (event) {
     
     }
     document.getElementById('currentWord').innerText = currentWord;
+    var w = wins;
+    
+  for (var currentWord = 0; currentWord === liveWord.length; w++) {
 
+  }
     // if currentWord with all white space removed === liveWord with all white space removed and they have chances left they win
     // if currentWord with all white space removed !== liveWord with all white space removed and they are out of chances they lose
     // update wins and losses accordingly
