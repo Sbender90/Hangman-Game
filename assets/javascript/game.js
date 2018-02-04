@@ -4,7 +4,7 @@ var wordList = ["weezer", "nirvina", "social distortion", "cake",
     "soundgarden", "soul asylum"
 ];
 
-var wins = [];
+var winsArray = [];
 var lives = 9;
 var usedLetters = [];
 var randomWordIndex = Math.floor(Math.random() * wordList.length);
@@ -47,11 +47,16 @@ document.onkeyup = function (event) {
     
     }
     document.getElementById('currentWord').innerText = currentWord;
-    var w = wins;
     
-  for (var currentWord = 0; currentWord === liveWord.length; w++) {
+    
+  var winner = "winsArray";
 
+  for (var winsArray = 0; winsArray > liveWord.length; winsArray++) {
+      winner = "wins: " + winsArray;
+      winner.push(winsArray);
+      console.log(winner);
   }
+  document.getElementById('h3').innerHTML = winsArray;
     // if currentWord with all white space removed === liveWord with all white space removed and they have chances left they win
     // if currentWord with all white space removed !== liveWord with all white space removed and they are out of chances they lose
     // update wins and losses accordingly
